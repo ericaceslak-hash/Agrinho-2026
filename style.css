@@ -1,0 +1,16 @@
+// Seleciona o botão de alternar tema e o corpo da página (body)
+const themeToggleBtn = document.getElementById('theme-toggle');
+const bodyElement = document.body;
+
+// Adiciona um evento de clique ao botão
+themeToggleBtn.addEventListener('click', () => {
+    // Alterna a classe 'dark-mode' no elemento <body>
+    bodyElement.classList.toggle('dark-mode');
+    
+    // Altera o texto do botão para dar um feedback visual
+    if (bodyElement.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = "Modo Claro ☀️";
+    } else {
+        themeToggleBtn.textContent = "Modo Escuro 🌓";
+    }
+});
